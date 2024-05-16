@@ -72,7 +72,7 @@ public class BookControllerTest {
         String bookISBN = "123456789012";
         ResponseEntity<MessageData> messageDataResponse;
 
-        mockMvc = MockMvcBuilders.standaloneSetup(mockBookController).setControllerAdvice(controllerAdvisor).build();
+            mockMvc = MockMvcBuilders.standaloneSetup(mockBookController).setControllerAdvice(controllerAdvisor).build();
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/book/" + bookISBN);
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
